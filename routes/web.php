@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'basicCurdController@index');
+
+Route::get('/create', 'basicCurdController@create');
+Route::post('/insert', 'basicCurdController@insert');
+
+Route::get('/updateView', 'basicCurdController@updateView');
+Route::post('/update', 'basicCurdController@update');
+
+Route::get('/deleteView', 'basicCurdController@deleteView');
+Route::post('/dataDelete', 'basicCurdController@delete');
